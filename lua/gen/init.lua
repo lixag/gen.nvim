@@ -20,12 +20,6 @@ local function trim_table(tbl)
 end
 
 local function get_window_options()
-
-    local width = math.floor(vim.o.columns * 0.9) -- 90% of the current editor's width
-    local height = math.floor(vim.o.lines * 0.9)
-    local row = math.floor((vim.o.lines - height) / 2)
-    local col = math.floor((vim.o.columns - width) / 2)
-
     local cursor = vim.api.nvim_win_get_cursor(0)
     local new_win_width = vim.api.nvim_win_get_width(0)
     local win_height = vim.api.nvim_win_get_height(0)
